@@ -1,0 +1,44 @@
+cache_dir: "weights"
+model_config_path: "model_config.yaml"
+dtype: "bfloat16"
+output_dir: "output"
+total_steps: 50
+
+# wandb
+use_wandb: true
+wandb_project: "Face Swapping"
+wandb_name: "demo_training"
+
+# dataset
+images_dir: "small_shhq/images"
+masks_dir: "small_shhq/masks"
+captions_dir: "small_shhq/captions"
+failed_captions_file: "shhq_dataset/failed_captions.txt"
+train_test_split: 0.6
+batch_size: 1
+num_dataloader_workers: 2
+num_prefetch_data_batches: 2
+
+# training
+grad_accum_steps: 1
+checkpoint_saving_interval: 2
+val_interval: 2
+val_steps: 2
+val_print: true
+log_interval: 2
+
+# inference params
+invert_till: 40
+num_inference_steps: 50
+io_mask_head_condition_cfg: 3.5
+
+# loss weights
+lpips_loss_weight: 10.0
+pose_loss_weight: 0.05
+head_mask_loss_weight: 200.0
+hair_sim_loss_weight: 1
+id_sim_loss_weight: 10.0
+recon_loss_weight: 120.0
+
+# external models
+hopenet_model_path: "module_models/hopenet_model.pkl"

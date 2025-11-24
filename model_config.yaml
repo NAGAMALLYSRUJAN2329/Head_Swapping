@@ -1,0 +1,75 @@
+id_encoder:
+  class: InsightFaceEncoder
+  params: 
+    ctx_id: 0
+    det_size: [640, 640]
+    dtype: torch.bfloat16
+
+clip_img_encoder:
+  class: CLIPImageEncoder
+  params:
+    model_code: vit_l
+
+hair_encoder:
+  class: HairEncoder
+  params:
+    weight_path: module_models/hair_encoder_weights.pt
+
+hair_encoder_adapter_1:
+  class: HairEncoderAdapter
+  params: {}
+
+id_encoder_adapter:
+  class: Adapter
+  params:
+    in_dim: 512
+    out_dim: 2048
+
+id_clip_encoder_adapter:
+  class: Adapter
+  params:
+    in_dim: 768
+    out_dim: 2048
+
+hair_clip_encoder_adapter:
+  class: Adapter
+  params:
+    in_dim: 768
+    out_dim: 2048
+
+hair_encoder_adapter_2:
+  class: Adapter
+  params:
+    in_dim: 512
+    out_dim: 2048
+
+hair_fusion_module:
+  class: QFormer
+  params:
+    num_query_tokens: 1
+    dim: 2048
+    num_heads: 8
+    num_layers: 2
+    mlp_ffn_ratio: 2
+    use_self_attn: false
+    refine_dim: null
+
+id_fusion_module:
+  class: QFormer
+  params:
+    num_query_tokens: 1
+    dim: 2048
+    num_heads: 8
+    num_layers: 2
+    mlp_ffn_ratio: 2
+    use_self_attn: false
+    refine_dim: null
+
+mask_model:
+  class: SCHPModel
+  params:
+    model_path: "module_models/schp_model.pth"
+
+unet_lora:
+  use_lora: true
+  rank: 64

@@ -1,0 +1,254 @@
+nohup: ignoring input
+[I 2025-11-23 18:54:11.066 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2025-11-23 18:54:11.069 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2025-11-23 18:54:11.073 ServerApp] jupyterlab | extension was successfully linked.
+[I 2025-11-23 18:54:11.291 ServerApp] notebook_shim | extension was successfully linked.
+[I 2025-11-23 18:54:11.308 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2025-11-23 18:54:11.310 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2025-11-23 18:54:11.311 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2025-11-23 18:54:11.313 LabApp] JupyterLab extension loaded from /opt/conda/lib/python3.10/site-packages/jupyterlab
+[I 2025-11-23 18:54:11.313 LabApp] JupyterLab application directory is /opt/conda/share/jupyter/lab
+[I 2025-11-23 18:54:11.313 LabApp] Extension Manager is 'pypi'.
+[I 2025-11-23 18:54:11.360 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2025-11-23 18:54:11.361 ServerApp] Serving notebooks from local directory: /workspace
+[I 2025-11-23 18:54:11.361 ServerApp] Jupyter Server 2.17.0 is running at:
+[I 2025-11-23 18:54:11.361 ServerApp] http://65361e6155c6:8888/lab?token=ede217a999e8fb02b8bdab00f54f74558374a2a2fff6b876
+[I 2025-11-23 18:54:11.361 ServerApp]     http://127.0.0.1:8888/lab?token=ede217a999e8fb02b8bdab00f54f74558374a2a2fff6b876
+[I 2025-11-23 18:54:11.361 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 2025-11-23 18:54:11.364 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///root/.local/share/jupyter/runtime/jpserver-25-open.html
+    Or copy and paste one of these URLs:
+        http://65361e6155c6:8888/lab?token=ede217a999e8fb02b8bdab00f54f74558374a2a2fff6b876
+        http://127.0.0.1:8888/lab?token=ede217a999e8fb02b8bdab00f54f74558374a2a2fff6b876
+[I 2025-11-23 18:54:11.380 ServerApp] Skipped non-installed server(s): basedpyright, bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyrefly, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[W 2025-11-23 18:54:58.020 ServerApp] 404 GET /api/kernels/12e3a392-e9b1-4834-95c7-6db8ba3a41d6?1763924097501 (172.17.0.1): Kernel does not exist: 12e3a392-e9b1-4834-95c7-6db8ba3a41d6
+[W 2025-11-23 18:54:58.020 ServerApp] wrote error: 'Kernel does not exist: 12e3a392-e9b1-4834-95c7-6db8ba3a41d6'
+    Traceback (most recent call last):
+      File "/opt/conda/lib/python3.10/site-packages/tornado/web.py", line 1848, in _execute
+        result = await result
+      File "/opt/conda/lib/python3.10/site-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+      File "/opt/conda/lib/python3.10/site-packages/jupyter_server/services/kernels/handlers.py", line 75, in get
+        model = await ensure_async(km.kernel_model(kernel_id))
+      File "/opt/conda/lib/python3.10/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 513, in kernel_model
+        self._check_kernel_id(kernel_id)
+      File "/opt/conda/lib/python3.10/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 544, in _check_kernel_id
+        raise web.HTTPError(404, "Kernel does not exist: %s" % kernel_id)
+    tornado.web.HTTPError: HTTP 404: Not Found (Kernel does not exist: 12e3a392-e9b1-4834-95c7-6db8ba3a41d6)
+[W 2025-11-23 18:54:58.022 ServerApp] 404 GET /api/kernels/12e3a392-e9b1-4834-95c7-6db8ba3a41d6?1763924097501 (a6cd76c7a8064d5e8fb8947499ee3e73@172.17.0.1) 2.42ms referer=http://127.0.0.1:8888/lab/tree/reface/Untitled.ipynb
+[W 2025-11-23 18:54:58.652 ServerApp] 404 GET /api/kernels/12e3a392-e9b1-4834-95c7-6db8ba3a41d6/channels?session_id=7c097bd0-e55e-4943-8ca2-04303a7329c4 (172.17.0.1): Kernel does not exist: 12e3a392-e9b1-4834-95c7-6db8ba3a41d6
+[W 2025-11-23 18:54:58.666 ServerApp] 404 GET /api/kernels/12e3a392-e9b1-4834-95c7-6db8ba3a41d6/channels?session_id=7c097bd0-e55e-4943-8ca2-04303a7329c4 (a6cd76c7a8064d5e8fb8947499ee3e73@172.17.0.1) 14.29ms referer=None
+[W 2025-11-23 18:54:58.681 ServerApp] 404 GET /api/kernels/12e3a392-e9b1-4834-95c7-6db8ba3a41d6?1763924098165 (172.17.0.1): Kernel does not exist: 12e3a392-e9b1-4834-95c7-6db8ba3a41d6
+[W 2025-11-23 18:54:58.681 ServerApp] wrote error: 'Kernel does not exist: 12e3a392-e9b1-4834-95c7-6db8ba3a41d6'
+    Traceback (most recent call last):
+      File "/opt/conda/lib/python3.10/site-packages/tornado/web.py", line 1848, in _execute
+        result = await result
+      File "/opt/conda/lib/python3.10/site-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+      File "/opt/conda/lib/python3.10/site-packages/jupyter_server/services/kernels/handlers.py", line 75, in get
+        model = await ensure_async(km.kernel_model(kernel_id))
+      File "/opt/conda/lib/python3.10/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 513, in kernel_model
+        self._check_kernel_id(kernel_id)
+      File "/opt/conda/lib/python3.10/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 544, in _check_kernel_id
+        raise web.HTTPError(404, "Kernel does not exist: %s" % kernel_id)
+    tornado.web.HTTPError: HTTP 404: Not Found (Kernel does not exist: 12e3a392-e9b1-4834-95c7-6db8ba3a41d6)
+[W 2025-11-23 18:54:58.681 ServerApp] 404 GET /api/kernels/12e3a392-e9b1-4834-95c7-6db8ba3a41d6?1763924098165 (a6cd76c7a8064d5e8fb8947499ee3e73@172.17.0.1) 0.65ms referer=http://127.0.0.1:8888/lab/tree/reface/Untitled.ipynb
+[W 2025-11-23 18:54:58.757 ServerApp] 404 GET /api/kernels/8ec48901-15b1-4898-aaff-9becafb60741?1763924098236 (172.17.0.1): Kernel does not exist: 8ec48901-15b1-4898-aaff-9becafb60741
+[W 2025-11-23 18:54:58.757 ServerApp] wrote error: 'Kernel does not exist: 8ec48901-15b1-4898-aaff-9becafb60741'
+    Traceback (most recent call last):
+      File "/opt/conda/lib/python3.10/site-packages/tornado/web.py", line 1848, in _execute
+        result = await result
+      File "/opt/conda/lib/python3.10/site-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+      File "/opt/conda/lib/python3.10/site-packages/jupyter_server/services/kernels/handlers.py", line 75, in get
+        model = await ensure_async(km.kernel_model(kernel_id))
+      File "/opt/conda/lib/python3.10/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 513, in kernel_model
+        self._check_kernel_id(kernel_id)
+      File "/opt/conda/lib/python3.10/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 544, in _check_kernel_id
+        raise web.HTTPError(404, "Kernel does not exist: %s" % kernel_id)
+    tornado.web.HTTPError: HTTP 404: Not Found (Kernel does not exist: 8ec48901-15b1-4898-aaff-9becafb60741)
+[W 2025-11-23 18:54:58.757 ServerApp] 404 GET /api/kernels/8ec48901-15b1-4898-aaff-9becafb60741?1763924098236 (a6cd76c7a8064d5e8fb8947499ee3e73@172.17.0.1) 0.80ms referer=http://127.0.0.1:8888/lab/tree/reface/Untitled.ipynb
+[W 2025-11-23 18:54:59.041 ServerApp] 404 GET /api/kernels/8ec48901-15b1-4898-aaff-9becafb60741/channels?session_id=4e4eee6b-35d6-4701-8e8c-6ded55fb3302 (172.17.0.1): Kernel does not exist: 8ec48901-15b1-4898-aaff-9becafb60741
+[W 2025-11-23 18:54:59.042 ServerApp] 404 GET /api/kernels/8ec48901-15b1-4898-aaff-9becafb60741/channels?session_id=4e4eee6b-35d6-4701-8e8c-6ded55fb3302 (a6cd76c7a8064d5e8fb8947499ee3e73@172.17.0.1) 1.33ms referer=None
+[W 2025-11-23 18:54:59.050 ServerApp] 404 GET /api/kernels/8ec48901-15b1-4898-aaff-9becafb60741?1763924098537 (172.17.0.1): Kernel does not exist: 8ec48901-15b1-4898-aaff-9becafb60741
+[W 2025-11-23 18:54:59.050 ServerApp] wrote error: 'Kernel does not exist: 8ec48901-15b1-4898-aaff-9becafb60741'
+    Traceback (most recent call last):
+      File "/opt/conda/lib/python3.10/site-packages/tornado/web.py", line 1848, in _execute
+        result = await result
+      File "/opt/conda/lib/python3.10/site-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+      File "/opt/conda/lib/python3.10/site-packages/jupyter_server/services/kernels/handlers.py", line 75, in get
+        model = await ensure_async(km.kernel_model(kernel_id))
+      File "/opt/conda/lib/python3.10/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 513, in kernel_model
+        self._check_kernel_id(kernel_id)
+      File "/opt/conda/lib/python3.10/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 544, in _check_kernel_id
+        raise web.HTTPError(404, "Kernel does not exist: %s" % kernel_id)
+    tornado.web.HTTPError: HTTP 404: Not Found (Kernel does not exist: 8ec48901-15b1-4898-aaff-9becafb60741)
+[W 2025-11-23 18:54:59.051 ServerApp] 404 GET /api/kernels/8ec48901-15b1-4898-aaff-9becafb60741?1763924098537 (a6cd76c7a8064d5e8fb8947499ee3e73@172.17.0.1) 0.63ms referer=http://127.0.0.1:8888/lab/tree/reface/Untitled.ipynb
+[W 2025-11-23 18:54:59.489 ServerApp] 404 GET /api/kernels/12e3a392-e9b1-4834-95c7-6db8ba3a41d6/channels?session_id=7c097bd0-e55e-4943-8ca2-04303a7329c4 (172.17.0.1): Kernel does not exist: 12e3a392-e9b1-4834-95c7-6db8ba3a41d6
+[W 2025-11-23 18:54:59.490 ServerApp] 404 GET /api/kernels/12e3a392-e9b1-4834-95c7-6db8ba3a41d6/channels?session_id=7c097bd0-e55e-4943-8ca2-04303a7329c4 (a6cd76c7a8064d5e8fb8947499ee3e73@172.17.0.1) 0.75ms referer=None
+[W 2025-11-23 18:55:33.138 LabApp] Could not determine jupyterlab build status without nodejs
+[I 2025-11-23 18:55:34.074 ServerApp] New terminal with automatic name: 4
+[I 2025-11-23 18:55:34.266 ServerApp] New terminal with automatic name: 5
+[W 2025-11-23 18:55:34.443 ServerApp] The websocket_ping_timeout (90000) cannot be longer than the websocket_ping_interval (30000).
+    Setting websocket_ping_timeout=30000
+[W 2025-11-23 18:55:35.085 ServerApp] Notebook testing.ipynb is not trusted
+[I 2025-11-23 18:55:35.982 ServerApp] Kernel started: 3851c991-7d29-4383-af96-bbc802127089
+[I 2025-11-23 18:55:36.668 ServerApp] Connecting to kernel 3851c991-7d29-4383-af96-bbc802127089.
+[I 2025-11-23 18:55:36.932 ServerApp] Connecting to kernel 3851c991-7d29-4383-af96-bbc802127089.
+[I 2025-11-23 18:55:38.343 ServerApp] Kernel started: 091e9153-7332-4b4c-9c2b-5fae72eefa46
+[I 2025-11-23 18:55:39.032 ServerApp] Connecting to kernel 091e9153-7332-4b4c-9c2b-5fae72eefa46.
+[I 2025-11-23 18:55:39.079 ServerApp] Connecting to kernel 091e9153-7332-4b4c-9c2b-5fae72eefa46.
+[I 2025-11-23 18:55:41.297 ServerApp] Kernel started: bcca8f63-31a6-48e6-a064-5335bbade670
+[I 2025-11-23 18:55:41.660 ServerApp] Connecting to kernel bcca8f63-31a6-48e6-a064-5335bbade670.
+[W 2025-11-23 18:56:05.381 ServerApp] delete /my_shhq_dataset-Copy1.tar.gz
+[W 2025-11-23 18:56:05.383 ServerApp] delete /my_shhq_dataset.tar.gz
+[I 2025-11-23 18:57:14.604 ServerApp] Kernel restarted: 3851c991-7d29-4383-af96-bbc802127089
+[I 2025-11-23 18:57:14.617 ServerApp] Starting buffering for 3851c991-7d29-4383-af96-bbc802127089:7636d16a-d021-4daa-8083-0098bd0a8fbf
+[I 2025-11-23 18:57:14.661 ServerApp] Connecting to kernel 3851c991-7d29-4383-af96-bbc802127089.
+[I 2025-11-23 18:57:14.661 ServerApp] Restoring connection for 3851c991-7d29-4383-af96-bbc802127089:7636d16a-d021-4daa-8083-0098bd0a8fbf
+[I 2025-11-23 18:57:35.190 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 18:59:35.837 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 19:01:36.714 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 19:03:37.830 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 19:05:38.724 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 19:07:39.732 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 19:09:29.079 ServerApp] Creating new directory in 
+[W 2025-11-23 19:09:37.294 ServerApp] delete /Untitled Folder
+[I 2025-11-23 19:09:39.789 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 19:09:49.865 ServerApp] Creating new directory in /reface
+[I 2025-11-23 19:11:40.838 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 19:13:41.723 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 19:15:41.779 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 19:17:41.879 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 19:19:41.937 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 19:21:42.929 ServerApp] Saving file at /reface/Untitled.ipynb
+[1;31m2025-11-23 19:34:38.873564955 [E:onnxruntime:Default, provider_bridge_ort.cc:1992 TryGetProviderInfo_CUDA] /onnxruntime_src/onnxruntime/core/session/provider_bridge_ort.cc:1637 onnxruntime::Provider& onnxruntime::ProviderLibrary::Get() [ONNXRuntimeError] : 1 : FAIL : Failed to load library libonnxruntime_providers_cuda.so with error: libcublasLt.so.12: cannot open shared object file: No such file or directory
+[m
+[1;31m2025-11-23 19:34:39.184112398 [E:onnxruntime:Default, provider_bridge_ort.cc:1992 TryGetProviderInfo_CUDA] /onnxruntime_src/onnxruntime/core/session/provider_bridge_ort.cc:1637 onnxruntime::Provider& onnxruntime::ProviderLibrary::Get() [ONNXRuntimeError] : 1 : FAIL : Failed to load library libonnxruntime_providers_cuda.so with error: libcublasLt.so.12: cannot open shared object file: No such file or directory
+[m
+[1;31m2025-11-23 19:34:39.226522582 [E:onnxruntime:Default, provider_bridge_ort.cc:1992 TryGetProviderInfo_CUDA] /onnxruntime_src/onnxruntime/core/session/provider_bridge_ort.cc:1637 onnxruntime::Provider& onnxruntime::ProviderLibrary::Get() [ONNXRuntimeError] : 1 : FAIL : Failed to load library libonnxruntime_providers_cuda.so with error: libcublasLt.so.12: cannot open shared object file: No such file or directory
+[m
+[1;31m2025-11-23 19:34:39.265437244 [E:onnxruntime:Default, provider_bridge_ort.cc:1992 TryGetProviderInfo_CUDA] /onnxruntime_src/onnxruntime/core/session/provider_bridge_ort.cc:1637 onnxruntime::Provider& onnxruntime::ProviderLibrary::Get() [ONNXRuntimeError] : 1 : FAIL : Failed to load library libonnxruntime_providers_cuda.so with error: libcublasLt.so.12: cannot open shared object file: No such file or directory
+[m
+[1;31m2025-11-23 19:34:39.371724646 [E:onnxruntime:Default, provider_bridge_ort.cc:1992 TryGetProviderInfo_CUDA] /onnxruntime_src/onnxruntime/core/session/provider_bridge_ort.cc:1637 onnxruntime::Provider& onnxruntime::ProviderLibrary::Get() [ONNXRuntimeError] : 1 : FAIL : Failed to load library libonnxruntime_providers_cuda.so with error: libcublasLt.so.12: cannot open shared object file: No such file or directory
+[m
+[1;31m2025-11-23 19:34:53.935970771 [E:onnxruntime:Default, provider_bridge_ort.cc:1992 TryGetProviderInfo_CUDA] /onnxruntime_src/onnxruntime/core/session/provider_bridge_ort.cc:1637 onnxruntime::Provider& onnxruntime::ProviderLibrary::Get() [ONNXRuntimeError] : 1 : FAIL : Failed to load library libonnxruntime_providers_cuda.so with error: libcublasLt.so.12: cannot open shared object file: No such file or directory
+[m
+[I 2025-11-23 19:35:55.228 ServerApp] Saving file at /reface/inference.ipynb
+[I 2025-11-23 19:37:56.875 ServerApp] Saving file at /reface/inference.ipynb
+[I 2025-11-23 19:39:57.914 ServerApp] Saving file at /reface/inference.ipynb
+[I 2025-11-23 19:41:59.055 ServerApp] Saving file at /reface/inference.ipynb
+[I 2025-11-23 19:43:49.061 ServerApp] Saving file at /reface/inference.ipynb
+[I 2025-11-23 19:43:50.638 ServerApp] Saving file at /reface/Untitled.ipynb
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[I 2025-11-23 19:45:44.883 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 19:47:44.964 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 19:49:45.059 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 19:51:45.159 ServerApp] Saving file at /reface/Untitled.ipynb
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[I 2025-11-23 19:53:45.223 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 19:55:45.272 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 19:57:45.500 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 19:59:45.977 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 20:00:23.595 ServerApp] Kernel interrupted: 3851c991-7d29-4383-af96-bbc802127089
+[I 2025-11-23 20:01:46.649 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 20:03:47.267 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 20:05:48.092 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 20:07:48.673 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 20:09:49.230 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 20:11:49.960 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 20:13:50.603 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 20:15:51.564 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 20:17:52.351 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 20:19:53.300 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 20:21:54.494 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 20:25:55.959 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 20:27:56.113 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 20:28:23.055 ServerApp] Kernel interrupted: 3851c991-7d29-4383-af96-bbc802127089
+Cancellation requested; stopping current tasks.
+[I 2025-11-23 20:29:56.281 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 20:33:56.456 ServerApp] Saving file at /reface/Untitled.ipynb
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[I 2025-11-23 20:35:56.779 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 20:37:56.758 ServerApp] Kernel restarted: 3851c991-7d29-4383-af96-bbc802127089
+[I 2025-11-23 20:37:56.793 ServerApp] Starting buffering for 3851c991-7d29-4383-af96-bbc802127089:7636d16a-d021-4daa-8083-0098bd0a8fbf
+[I 2025-11-23 20:37:56.816 ServerApp] Connecting to kernel 3851c991-7d29-4383-af96-bbc802127089.
+[I 2025-11-23 20:37:56.816 ServerApp] Restoring connection for 3851c991-7d29-4383-af96-bbc802127089:7636d16a-d021-4daa-8083-0098bd0a8fbf
+[I 2025-11-23 20:37:56.924 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 20:39:57.012 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 20:41:57.149 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 20:43:57.333 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 20:45:57.402 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 20:47:57.541 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 20:49:57.686 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 20:51:57.770 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 20:53:57.850 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 20:55:57.929 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 20:57:58.000 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 20:59:58.074 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 21:01:58.143 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 21:03:58.203 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 21:05:58.438 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 21:10:37.063 ServerApp] Saving file at /reface/inference.ipynb
+[I 2025-11-23 21:12:39.243 ServerApp] Saving file at /reface/inference.ipynb
+[I 2025-11-23 21:14:40.592 ServerApp] Saving file at /reface/inference.ipynb
+[I 2025-11-23 21:16:41.883 ServerApp] Saving file at /reface/inference.ipynb
+[W 2025-11-23 21:17:50.704 ServerApp] 404 GET /api/contents/modules/schp_model?content=0&hash=0&1763932669904 (a6cd76c7a8064d5e8fb8947499ee3e73@172.17.0.1) 0.75ms referer=http://127.0.0.1:8888/lab/tree/reface/inference.ipynb
+[W 2025-11-23 21:17:50.704 ServerApp] 404 GET /api/contents/modules/schp_model?content=0&hash=0&1763932669904 (172.17.0.1): No such file or directory: modules/schp_model
+[I 2025-11-23 21:18:01.143 ServerApp] Copying 'modules/schp_model.py' to '/reface'
+[I 2025-11-23 21:18:28.754 ServerApp] Copying 'module_models/schp_model.pth' to '/reface'
+[I 2025-11-23 21:18:43.205 ServerApp] Saving file at /reface/inference.ipynb
+[I 2025-11-23 21:20:44.397 ServerApp] Saving file at /reface/inference.ipynb
+[I 2025-11-23 21:22:45.527 ServerApp] Saving file at /reface/inference.ipynb
+[I 2025-11-23 21:24:47.196 ServerApp] Saving file at /reface/inference.ipynb
+[I 2025-11-23 21:26:49.025 ServerApp] Saving file at /reface/inference.ipynb
+[I 2025-11-23 21:28:50.076 ServerApp] Saving file at /reface/inference.ipynb
+[I 2025-11-23 21:30:51.193 ServerApp] Saving file at /reface/inference.ipynb
+[I 2025-11-23 21:32:53.206 ServerApp] Saving file at /reface/inference.ipynb
+[I 2025-11-23 21:34:55.174 ServerApp] Saving file at /reface/inference.ipynb
+[I 2025-11-23 21:36:56.344 ServerApp] Saving file at /reface/inference.ipynb
+[I 2025-11-23 21:38:58.020 ServerApp] Saving file at /reface/inference.ipynb
+[I 2025-11-23 21:40:02.100 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 21:42:02.196 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 21:44:02.360 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 21:46:03.320 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 21:48:03.411 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 21:50:04.108 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 21:52:04.298 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 21:52:42.966 ServerApp] Saving file at /reface/inference.ipynb
+[W 2025-11-23 21:52:43.195 ServerApp] /workspace/reface/.~inference.ipynb doesn't exist
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[I 2025-11-23 21:54:04.475 ServerApp] Saving file at /reface/Untitled.ipynb
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[I 2025-11-23 21:56:05.155 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 21:58:06.055 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 22:02:06.175 ServerApp] Saving file at /reface/Untitled.ipynb
+[I 2025-11-23 22:04:07.229 ServerApp] Saving file at /reface/Untitled.ipynb
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[I 2025-11-23 22:06:08.071 ServerApp] Saving file at /reface/Untitled.ipynb
+[W 2025-11-23 22:10:28.607 ServerApp] delete /output.tar.gz
+[W 2025-11-23 22:24:35.555 ServerApp] delete /output.tar.gz
+[W 2025-11-23 22:25:50.488 ServerApp] delete /output_small_2/training_checkpoints/checkpoint_17000.pth
+[W 2025-11-23 22:25:59.044 ServerApp] delete /output_small_2/weights/checkpoint_17000.pth
+[W 2025-11-23 22:26:20.071 ServerApp] delete /output.tar.gz
